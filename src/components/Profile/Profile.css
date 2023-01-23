@@ -1,0 +1,101 @@
+
+.profile {
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 1vw;
+    background: var(--color-white);
+    box-shadow: 0px 1px 6px var(--shadow);
+}
+
+
+.summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16vh;
+}
+
+.summary div,
+.container div {
+    height: 6vh;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label, h1 {
+    letter-spacing: .6px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: .61rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: .81rem;
+    font-weight: 200;
+    color: var(--color-light);
+}
+
+.btn {
+    text-transform: capitalize;
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: 7vw;
+    height: 4vh;
+    border-radius: 2vh;
+    border: none;
+    font-size: .81rem;
+}
+
+
+.detailed {
+    width: 80%;
+    height: 50vh;
+    border-radius: 1vw;
+    box-shadow: 0px 1px 6px var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+}
+
+.container {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-areas: "description description description description"
+                         "description description description description"
+                         "description description description description"
+                         "contact address space space"
+                         "designation city space space"
+                         "emails state space space"
+                         "phones country space space";
+                         gap: .31vw;
+}
+
+
+#description {grid-area: description;}
+#contact {grid-area: contact;}
+#address {grid-area: address;}
+#designation {grid-area: designation;}
+#city {grid-area: city;}
+#emails {grid-area: emails;}
+#state {grid-area: state;}
+#phones {grid-area: phones;}
+#country {grid-area: country;}
+
+#active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0px 0px 3px var(--shadow);
+}
