@@ -3,13 +3,19 @@ import React, { memo } from "react";
 import './Navigation.css'
  
 
-const Navigation = ({pages, set, current}) => {
+const Navigation = ({pages, set, current, reset}) => {
 
+    
     const Pages = new Array(pages).fill(0);
 
 
+
+    //method to handle the (CURRENT PAGE CHANGES)
     const handleSetCurrent = (e) => {
         const type = e.target.name;
+
+        //resetting the profiles to undefined
+        reset(undefined);
 
         switch(type) {
             case "prev":
